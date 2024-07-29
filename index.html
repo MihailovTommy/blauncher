@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" href="https://ltdfoto.ru/images/2024/07/30/fav16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаунчер Minecraft</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Лаунчер Minecraft</h1>
+            <p>Стабильный, быстрый и простой</p>
+        </div>
+    </header>
+    <main>
+        <div class="overlay">
+            <section class="download">
+                <button onclick="downloadLauncher()">Скачать установщик</button>
+            </section>
+            <section class="screenshots">
+                <div class="screenshot-container">
+                    <div class="screenshot-scroll">
+                        <img src="screenshot1.png" alt="Скриншот 1">
+                        <img src="screenshot2.png" alt="Скриншот 2">
+                        <img src="screenshot3.png" alt="Скриншот 3">
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        function downloadLauncher() {
+            window.location.href = 'path-to-your-installer.exe';
+        }
+
+        document.querySelector('.screenshot-container').addEventListener('wheel', function(event) {
+            if (event.deltaY > 0) {
+                this.scrollLeft += 50;
+            } else {
+                this.scrollLeft -= 50;
+            }
+        });
+    </script>
+</body>
+</html>
